@@ -1,1 +1,1 @@
-web: ./lib-app -port $PORT
+web: lib-app -port $PORT
