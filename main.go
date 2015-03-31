@@ -3,6 +3,7 @@ package main
 import (
         "log"
         "net/smtp"
+        "fmt"
 )
 
 func main() {
@@ -12,7 +13,10 @@ func main() {
 	subject := "test"
 	msg := "test email"
 	body := "To: " + to + "\r\nSubject: " + subject + "\r\n\r\n" + msg
-   	auth := smtp.PlainAuth("", from, pwd, "smtp.gmail.com")
+
+	fmt.Printf("Sending email to : " + to)
+
+   	auth := smtp.PlainAuth("", "lib.reminder.app", pwd, "smtp.gmail.com")
    	err := smtp.SendMail("smtp.gmail.com:587", auth, from,
    		[]string{to},[]byte(body))
    	if err != nil {
