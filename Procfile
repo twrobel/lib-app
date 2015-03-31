@@ -1,1 +1,1 @@
-web: lib-app -port $PORT
+worker: lib-app
