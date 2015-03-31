@@ -18,5 +18,5 @@ func main() {
 }
 
 func all(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello GopherCasts!"))
+	w.Write([]byte("Test app"))
 }
